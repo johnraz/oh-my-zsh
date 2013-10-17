@@ -1,12 +1,6 @@
-# af-magic.zsh-theme
+# customization af-magic.zsh-theme
 #
-# Author: Andy Fleming
-# URL: http://andyfleming.com/
-# Repo: https://github.com/andyfleming/oh-my-zsh
-# Direct Link: https://github.com/andyfleming/oh-my-zsh/blob/master/themes/af-magic.zsh-theme
-#
-# Created on:		June 19, 2012
-# Last modified on:	June 20, 2012
+# Author: Jonathan Liuti
 
 
 
@@ -16,13 +10,12 @@ local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 # primary prompt
 
 function current_venv() {
-    if [ $VIRTUAL_ENV ]; then echo "$(virtualenv_prompt_info)
-\r";
+    if [ $VIRTUAL_ENV ]; then echo "\n$(virtualenv_prompt_info)";
     else echo ''; fi
 }
-PROMPT='$FG[237]------------------------------------------------------------%{$reset_color%}
-$(current_venv)$FG[032]%~\
-$(git_prompt_info) \
+PROMPT='$FG[237]------------------------------------------------------------%{$reset_color%}\
+$(current_venv)$FG[032]
+$(git_prompt_info)%~\
 $FG[105]%(!.#.»)%{$reset_color%} '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
 RPS1='${return_code}'
