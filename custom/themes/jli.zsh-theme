@@ -16,7 +16,7 @@ function current_venv() {
 PROMPT='$FG[237]------------------------------------------------------------%{$reset_color%}\
 $(current_venv)$FG[032]
 $(git_prompt_info)%~\
-$FG[105]%(!.#.»)%{$reset_color%} '
+$FG[105]%(!.#.»)$(vi_mode_prompt_info)%{$reset_color%} '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
 RPS1='${return_code}'
 
